@@ -1,0 +1,2 @@
+kernel/drivers/firmware/edd.ko
+kernel/drivers/firmware/efi/efivars.ko

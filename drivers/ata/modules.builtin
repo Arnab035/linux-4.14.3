@@ -1,0 +1,4 @@
+kernel/drivers/ata/libata.ko
+kernel/drivers/ata/ata_piix.ko
+kernel/drivers/ata/pata_sis.ko
+kernel/drivers/ata/ata_generic.ko

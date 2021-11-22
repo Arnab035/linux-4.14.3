@@ -1,0 +1,7 @@
+kernel/drivers/mfd/tps65912-core.ko
+kernel/drivers/mfd/tps65912-i2c.ko
+kernel/drivers/mfd/tps65912-spi.ko
+kernel/drivers/mfd/mfd-core.ko
+kernel/drivers/mfd/da9063.ko
+kernel/drivers/mfd/max14577.ko
+kernel/drivers/mfd/max77693.ko

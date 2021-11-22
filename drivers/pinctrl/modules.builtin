@@ -1,0 +1,2 @@
+kernel/drivers/pinctrl/pinctrl-amd.ko
+kernel/drivers/pinctrl/intel/pinctrl-cherryview.ko

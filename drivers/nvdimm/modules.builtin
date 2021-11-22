@@ -1,0 +1,2 @@
+kernel/drivers/nvdimm/libnvdimm.ko
+kernel/drivers/nvdimm/nd_e820.ko

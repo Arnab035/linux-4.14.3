@@ -1,0 +1,8 @@
+kernel/drivers/tty/serdev/serdev.ko
+kernel/drivers/tty/serial/serial_core.ko
+kernel/drivers/tty/serial/max310x.ko
+kernel/drivers/tty/serial/sccnxp.ko
+kernel/drivers/tty/serial/kgdboc.ko
+kernel/drivers/tty/serial/8250/8250.ko
+kernel/drivers/tty/serial/8250/8250_base.ko
+kernel/drivers/tty/serial/8250/8250_pci.ko

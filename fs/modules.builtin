@@ -1,0 +1,16 @@
+kernel/fs/binfmt_script.ko
+kernel/fs/mbcache.ko
+kernel/fs/configfs/configfs.ko
+kernel/fs/crypto/fscrypto.ko
+kernel/fs/ecryptfs/ecryptfs.ko
+kernel/fs/efivarfs/efivarfs.ko
+kernel/fs/exportfs/exportfs.ko
+kernel/fs/ext4/ext4.ko
+kernel/fs/fat/fat.ko
+kernel/fs/fat/vfat.ko
+kernel/fs/fuse/fuse.ko
+kernel/fs/jbd2/jbd2.ko
+kernel/fs/nls/nls_base.ko
+kernel/fs/nls/nls_cp437.ko
+kernel/fs/pstore/pstore.ko
+kernel/fs/squashfs/squashfs.ko
