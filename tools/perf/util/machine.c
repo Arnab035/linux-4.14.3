@@ -587,7 +587,7 @@ int machine__process_aux_event(struct machine *machine __maybe_unused,
 			       union perf_event *event)
 {
 	if (dump_trace)
-		perf_event__fprintf_aux(event, stdout);
+		//perf_event__fprintf_aux(event, stdout);
 	return 0;
 }
 
