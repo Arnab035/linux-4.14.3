@@ -1,4 +1,0 @@
-test-libunwind-arm.c:2:10: fatal error: libunwind-arm.h: No such file or directory
-    2 | #include <libunwind-arm.h>
-      |          ^~~~~~~~~~~~~~~~~
-compilation terminated.
