@@ -166,7 +166,6 @@ static void intel_pt_dump(struct intel_pt *pt __maybe_unused,
 	struct intel_pt_pkt packet;
 	size_t pos = 0;
 	int ret, pkt_len, i;
-	int print_switch = 0;
 	char desc[INTEL_PT_PKT_DESC_MAX];
 	const char *color = PERF_COLOR_BLUE;
 
