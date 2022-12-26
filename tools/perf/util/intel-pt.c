@@ -181,47 +181,27 @@ static void intel_pt_dump(struct intel_pt *pt __maybe_unused,
 						INTEL_PT_PKT_DESC_MAX);
 			if (ret > 0) 
 			{
-				if(strstr(desc, "(NR=1)") != NULL)
-                        	{
-                            		print_switch = 1;
-                        	}
-                        	else
-                        	{
-                            		if(print_switch == 1)
-                            		{
-                              			if(strstr(desc, "(NR=0)") != NULL)
-                              			{
-                                  			print_switch = 0;
-                                  			color_fprintf(stdout, color, "%s\n", desc);
-                              			}
-                            		}
-                        	}
-				if (print_switch)
-				{
-				        /*if((strstr(desc, "PIP") != NULL) || (strstr(desc, "TIP") != NULL) || (strstr(desc, "FUP") != NULL) || (strstr(desc, "TNT") != NULL))
-                            		{*/
-                                		if(strstr(desc, "TNT") != NULL) {
-							color_fprintf(stdout, color, "%s\n", desc);
-                                		}
-                                		else {
-                                  			if(strstr(desc, "TIP") != NULL) {
-                                    				color_fprintf(stdout, color, "%s ", desc);
-                                    				color_fprintf(stdout, color, "%02x\n", buf[0]);
-                                  			}
-                                  			else if(strstr(desc, "PIP") != NULL) {
-                                    				color_fprintf(stdout, color, "%s ", desc);
-                                    				for(i=pkt_len; i>2; i--) {
-                                      					color_fprintf(stdout, color, "%02x", buf[i]);
-                                    				}
-                                    				printf("\n");
-                                  			}
-							else {
-								// this is FUP
-								color_fprintf(stdout, color, "%s ", desc);
-								color_fprintf(stdout, color, "%02x\n", buf[0]);
-							}
+				if ((strstr(desc, "TNT") != NULL) || (strstr(desc, "TSC") != NULL) ||
+					(strstr(desc, "MTC") != NULL)) {
+					color_fprintf(stdout, color, "%s\n", desc);
+				}
+				else {
+					if (strstr(desc, "TIP") != NULL) {
+						color_fprintf(stdout, color, "%s ", desc);
+						color_fprintf(stdout, color, "%02x\n", buf[0]);
+					}
+					else if (strstr(desc, "PIP") != NULL) {
+						color_fprintf(stdout, color, "%s ", desc);
+						for (i=pkt_len; i > 2; i--) {
+							color_fprintf(stdout, color, "%02x", buf[i]);
 						}
-					//}
+						printf("\n");
+					}
+					else {
+						// this is FUP
+						color_fprintf(stdout, color, "%s ", desc);
+						color_fprintf(stdout, color, "%02x\n", buf[0]);
+					}
 				}
 			}
 		} else {
@@ -236,7 +216,6 @@ static void intel_pt_dump(struct intel_pt *pt __maybe_unused,
 static void intel_pt_dump_event(struct intel_pt *pt, unsigned char *buf,
 				size_t len)
 {
-	printf(".\n");
 	intel_pt_dump(pt, buf, len);
 }
 
